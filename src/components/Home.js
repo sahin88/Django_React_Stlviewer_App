@@ -25,7 +25,7 @@ import Spinner from "./Spinner";
                                     <span>Width [mm] : </span> {client.width.toFixed(3)}   
                                     </p>
                                     <p className="bounding_box_column">
-                                    <span>Length [mm] : </span> {client.width.toFixed(3)}   
+                                    <span>Length [mm] : </span> {client.length.toFixed(3)}   
                                     </p>
                                     </div>
                                 </div>
