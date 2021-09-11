@@ -1,0 +1,151 @@
+# StlViewer App
+
+## Features
+
+- Django RestFramework 3.12.4
+- Django==3.2.7
+- PostgreSQL database support with psycopg2.
+- ReactJs, Redux, Css
+
+## Appview
+
+## Usage
+
+After sucessfully running application, select file with extention of ".stl". If you want to see the three dimensional vief of relavant file,please be sure that checkbox is checked.
+After succesfully uploading file, press submit button, then the results will be shown on. ".STL"files don't contain units, therfore I have accepted 1 units as 1mm for extraction of data.
+
+<img src="kreatize_juniour_python_engineer.png"  width="400px" height="400px">.
+
+## Getting Started
+
+Firstly, download the codes from repository or email, then run following command.
+
+```
+
+$ cd kreatize_coding_challenge
+
+```
+
+Create virtual enviroment by running following command.
+
+```
+$ python3 -m venv venv
+
+```
+
+Activate the virtualenv for your project.
+
+```
+$ source venv/bin/activate
+
+```
+
+Install project dependencies:
+
+```
+$ pip install -r requirements.txt
+
+```
+
+Postgresql Configuration: First create a table by running following command on command line.
+If you dont have Postgresqlon your machine, you can basically comment Database section in settings.py file,continue with django's default database 'SQlite'.
+You can find this configurations in Settings.py file with label "DJANGO DEFAULT DATABASE".
+
+```
+$ psql
+
+```
+
+or
+
+```
+$ sudo -u postgres psql
+
+```
+
+after that, run respectively following commands
+
+```
+# CREATE USER name;
+```
+
+```
+# CREATE DATABASE fileupp OWNER name;
+```
+
+Finally Update your settings.py and enter your password and username
+
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'fileup',
+        'USER': '**** #your db username',
+        'PASSWORD': '***** your db password',
+        'HOST': 'localhost'
+    }
+}
+
+```
+
+To install React dependencies and and also combine with Django RestFramework, firstly;
+
+```
+$ npm install
+```
+
+Make "build" folder. By runnig following command, The "build" folder will be created inside backend folder automatically.
+
+```
+$ npm  run build
+
+```
+
+Then, simply makemigrations, to make migration firstly go inside backend directory by running following command;
+
+```
+$ cd backend
+```
+
+after;
+
+```
+$ python manage.py makemigrations
+
+```
+
+After making migrations successfully, run following command to create table
+
+```
+$ python manage.py migrate
+
+```
+
+Now,you can start the Django development server
+
+```
+$ python manage.py runserver
+
+```
+
+If you want to run test model,url and views files, please run following command:
+
+```
+$ python manage.py  test
+
+```
+
+## Licence
+
+MIT
+
+Copyright (c)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
