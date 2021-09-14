@@ -18,10 +18,6 @@ def get_mesh(fileUrl):
 
 @api_view(['GET', 'POST'])
 def file_list(request):
-    if request.method == 'GET':
-        files = FileModel.objects.all()
-        serializer = FileSerializer(files, many=True)
-        return Response(serializer.data)
     if request.method == 'POST':
 
         serializer = FileSerializer(data=request.data)

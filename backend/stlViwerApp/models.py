@@ -8,7 +8,6 @@ class FileModel(models.Model):
 
     def delete(self, *args, **kwargs):
         os.remove(os.path.join(settings.MEDIA_ROOT, self.file.name))
-        print("delete_section",os.path.join(settings.MEDIA_ROOT, self.file.name))
         super(FileModel,self).delete(*args,**kwargs)
    
     def __str__(self):
