@@ -16,7 +16,7 @@ def get_mesh(fileUrl):
     return mesh.Mesh.from_file(full_path)
 
 
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def file_list(request):
     if request.method == 'POST':
 
