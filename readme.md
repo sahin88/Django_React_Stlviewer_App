@@ -22,7 +22,7 @@ Firstly, download the codes from the repository or email, then run the following
 
 ```
 
-$ cd kreatize_coding_challenge
+$ cd Django_React_Stlviewer_App
 
 ```
 
