@@ -16,7 +16,8 @@ def get_mesh(fileUrl):
     return mesh.Mesh.from_file(full_path)
 
 
-@api_view(['POST'])
+
+@api_view(['GET', 'POST'])
 def file_list(request):
     if request.method == 'POST':
 
@@ -27,9 +28,21 @@ def file_list(request):
          
             meshObject=MeshSolve(mesh)
             res=meshObject.solve()
-            
-            file=FileModel.objects.get(id=serializer.data['id'])
-            file.delete()
+            delete_response=delete_file(serializer.data['id'])
+
+
+
+
+            if delete_response['response']==True:
+                pass
+            else:
+               
+                content = {'error':str(delete_response['message'])}
+                return Response(content, status=status.HTTP_400_BAD_REQUEST)
+
+
+           
+           
 
             return Response(res, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
