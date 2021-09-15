@@ -15,6 +15,20 @@ def get_mesh(fileUrl):
     full_path = os.path.join(BASE_DIR,fileUrl.strip("/"))
     return mesh.Mesh.from_file(full_path)
 
+def delete_file(id):
+    res={}
+    try:
+        file=FileModel.objects.get(id=id)
+        file.delete()
+        res['response']=True
+        return res
+    except  Exception as error:
+        res['response']=False
+        res['message']=error
+        return res
+
+
+
 
 
 @api_view(['GET', 'POST'])
