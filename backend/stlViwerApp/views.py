@@ -31,7 +31,7 @@ def delete_file(id):
 
 
 
-@api_view(['GET', 'POST'])
+@api_view([ 'POST'])
 def file_list(request):
     if request.method == 'POST':
 
@@ -47,7 +47,7 @@ def file_list(request):
 
 
 
-            if delete_response['response']==True:
+            if delete_response['response']:
                 pass
             else:
                
