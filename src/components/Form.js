@@ -24,6 +24,9 @@ function HomeLeftForm({showImage,setImageShow}) {
     // Form submission
     const handleSubmitForm = (event) => {
         event.preventDefault()
+	 if (image==''){
+		   return alert("Please choose a stl file")
+		}
         let name_list=image.name.split('.')
         const file_extension=name_list[name_list.length-1].toLowerCase()
         if(checkExtention(file_extension)){

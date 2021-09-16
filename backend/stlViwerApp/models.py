@@ -12,7 +12,3 @@ class FileModel(models.Model):
    
     def __str__(self):
         return str(self.id)
-
-    @property
-    def get_keyword_property(self):
-        return self.id

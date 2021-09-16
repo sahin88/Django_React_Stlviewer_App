@@ -1,7 +1,6 @@
 import { CREATE_POST,END_LOADING, START_LOADING } from "./types";
 import axios from 'axios';
 
-
 export const createPost = (newpost) => async (dispatch) => {
 
 
@@ -11,8 +10,7 @@ export const createPost = (newpost) => async (dispatch) => {
         }).then(res=>{
             dispatch({ type: CREATE_POST, payload: res.data })
         }).catch(err=>{
-            console.log()
-            alert("error from backend"+err.response.data.error)
+            alert("error from backend"+err.response.data.detail)
         })
         
         dispatch({ type: END_LOADING });

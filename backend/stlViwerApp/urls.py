@@ -1,7 +1,7 @@
 
 from django.urls import path
-from .views import file_list
+from .views import file_exract
 urlpatterns = [
-    path('',file_list, name='get_post'),
+    path('',file_exract, name='get_post'),
    
 ]

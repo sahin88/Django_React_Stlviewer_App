@@ -136,7 +136,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fileupp',
         'USER': 'sahin',
-        'PASSWORD': 'youaremypassword',
+        'PASSWORD': 'sahin123',
         'HOST': 'localhost'
     }
 }
