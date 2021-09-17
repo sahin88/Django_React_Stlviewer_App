@@ -14,7 +14,7 @@
 After successfully running the application, select a file with an extension of ".stl". If you want to see the three-dimensional view of the relevant file, please be sure that the checkbox is checked.
 After successfully uploading the file, press submit button, then the results will be shown on. ".STL" files don't contain units, therefore I have accepted 1 unit as 1mm for extraction of data.
 
-<img src="kreatize_juniour_python_engineer.png"  width="400px" height="400px">.
+<img src="image_of_app.png"  width="400px" height="400px">.
 
 ## Getting Started
 
